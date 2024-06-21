@@ -44,15 +44,13 @@ def hillClimbing(x, height, neighbor, max_fail=10000):
                 return x
 
 def height(path):
-    return -pathLength(path)  # 因為我們尋找的是最短路徑，將距離取負
+    return -pathLength(path) 
 
-# 使用爬山演算法尋找最佳路徑
 best_path = hillClimbing(path, height, neighbor)
 
 print('Best path:', best_path)
 print('Best path length:', pathLength(best_path))
 
-# 繪製路徑
 import matplotlib.pyplot as plt
 
 def plot_path(citys, path):
